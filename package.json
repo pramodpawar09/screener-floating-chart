@@ -1,0 +1,20 @@
+{
+  "name": "screener-floating-chart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension (MV3) that shows a floating candlestick chart when hovering stock names on Screener.in",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs --watch",
+    "test": "node --test",
+    "icons": "node scripts/make-icons.mjs",
+    "verify": "node scripts/verify-dist.mjs"
+  },
+  "dependencies": {
+    "lightweight-charts": "^5.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

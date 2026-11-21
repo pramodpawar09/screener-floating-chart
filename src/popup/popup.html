@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Screener Floating Chart</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Screener Floating Chart</h1>
+    <label class="switch" title="Enable or disable the extension">
+      <input type="checkbox" id="enabled" />
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main>
+    <div class="row"><label for="theme">Chart theme</label>
+      <select id="theme"><option value="dark">Dark</option><option value="light">Light</option></select></div>
+    <div class="row"><label for="defaultTimeframe">Default timeframe</label>
+      <select id="defaultTimeframe"></select></div>
+    <div class="row"><label for="hoverDelay">Hover delay (ms)</label>
+      <input type="number" id="hoverDelay" min="0" max="2000" step="50" /></div>
+    <div class="row"><label for="hideDelay">Hide delay (ms)</label>
+      <input type="number" id="hideDelay" min="100" max="3000" step="50" /></div>
+    <div class="row"><label for="width">Chart width (px)</label>
+      <input type="number" id="width" min="380" max="900" step="10" /></div>
+    <div class="row"><label for="height">Chart height (px)</label>
+      <input type="number" id="height" min="280" max="700" step="10" /></div>
+
+    <section class="status">
+      <div class="status-head"><strong>Data provider</strong><button id="test" type="button">Test connection</button></div>
+      <p id="provider-name">Yahoo Finance (unofficial) — no API key required</p>
+      <p id="provider-status" class="muted" role="status">Not tested yet.</p>
+      <details>
+        <summary>How it works / configuration</summary>
+        <p>Prices are real <em>historical</em> candles (not a live feed) fetched through the extension's background worker. No API key is needed for the default provider. To use a different provider, implement the provider interface in <code>src/services/providers/</code> and select it in <code>src/background/service-worker.js</code>.</p>
+        <p><strong>Tips:</strong> hover a stock name to preview. Use the pin button, or <kbd>Alt</kbd>+click a name, to keep it open. <kbd>Esc</kbd> closes.</p>
+      </details>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

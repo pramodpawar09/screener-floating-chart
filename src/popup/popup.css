@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { width: 320px; margin: 0; background: #0f1420; color: #e6e9f2; font: 12px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: #161c2b; border-bottom: 1px solid #252d40; }
+h1 { margin: 0; font-size: 14px; }
+main { padding: 10px 14px 14px; }
+.row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; }
+select, input[type=number] { width: 120px; padding: 4px 6px; background: #161c2b; color: inherit; border: 1px solid #252d40; border-radius: 6px; font: inherit; }
+select:focus-visible, input:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #4c8dff; outline-offset: 1px; }
+.status { margin-top: 10px; padding-top: 10px; border-top: 1px solid #252d40; }
+.status-head { display: flex; justify-content: space-between; align-items: center; }
+.status p { margin: 6px 0; }
+.muted { color: #8b94ab; } .ok { color: #26a69a; } .err { color: #ef5350; }
+button { padding: 4px 10px; border: 0; border-radius: 6px; background: #4c8dff; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: default; }
+details { color: #8b94ab; } summary { cursor: pointer; color: #e6e9f2; }
+code, kbd { background: #1d2538; padding: 0 4px; border-radius: 4px; }
+.switch { position: relative; display: inline-block; width: 38px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; inset: 0; background: #3a4358; border-radius: 22px; transition: 0.15s; cursor: pointer; }
+.slider::before { content: ""; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: 0.15s; }
+.switch input:checked + .slider { background: #26a69a; }
+.switch input:checked + .slider::before { transform: translateX(16px); }
+.switch input:focus-visible + .slider { outline: 2px solid #4c8dff; outline-offset: 2px; }

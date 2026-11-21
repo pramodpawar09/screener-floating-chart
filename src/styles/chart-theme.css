@@ -1,0 +1,11 @@
+:host { all: initial; }
+.sfc-panel[data-theme="dark"] {
+  --sfc-bg: #0f1420; --sfc-bg-2: #161c2b; --sfc-border: #252d40; --sfc-text: #e6e9f2;
+  --sfc-muted: #8b94ab; --sfc-up: #26a69a; --sfc-down: #ef5350; --sfc-accent: #4c8dff;
+  --sfc-warn: #e0a93b; --sfc-hover: #1d2538; --sfc-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+}
+.sfc-panel[data-theme="light"] {
+  --sfc-bg: #ffffff; --sfc-bg-2: #f5f6fa; --sfc-border: #d9dde7; --sfc-text: #1b2233;
+  --sfc-muted: #6a738a; --sfc-up: #14966f; --sfc-down: #d93a3a; --sfc-accent: #2f6fe4;
+  --sfc-warn: #9a6200; --sfc-hover: #eceff6; --sfc-shadow: 0 12px 40px rgba(20, 28, 50, 0.22);
+}
