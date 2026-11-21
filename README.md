@@ -115,14 +115,7 @@ node tests/e2e/ui-smoke.mjs      # then `npm run build` again (without the env v
 ```
 It does **not** validate Lightweight Charts rendering, live data, or behaviour inside a real extension context.
 
-## Known limitations
-- Unofficial data source (see above); data is historical/possibly delayed, never labelled live.
-- Very new or SME-segment BSE listings (e.g. Dudani Retail, BSE SME) may simply not exist at Yahoo Finance; the panel then reports which symbols were tried instead of showing a wrong chart. A different provider is the fix for those.
-- Hover on Screener's own *search-as-you-type* dropdown works only if its items are real `/company/…` anchors.
-- Company names are taken from link text (Screener abbreviates, e.g. "Natl. Aluminium"); the header also shows the market symbol.
-- 5Y uses weekly candles; 1D/1W intraday availability depends on the provider.
-- Chrome only (Manifest V3, Chrome ≥ 110).
-- Not tested on mobile/touch (hover is a pointer feature).
+
 
 ## Future improvements (not implemented)
 Indicators (SMA/EMA/RSI/MACD/Bollinger), drawing tools, additional providers, remembered panel size/position, watchlists, keyboard-only activation, Firefox build.
